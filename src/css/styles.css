@@ -1,0 +1,243 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body,
+html {
+  overflow-x: hidden;
+}
+
+.webgl {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+nav {
+  color: white;
+  z-index: 2;
+  position: relative;
+  padding: 4rem 8rem; /* Check under tags(media tags)*/
+  display: flex;
+  justify-content: space-evenly;
+}
+
+nav a img {
+  position: relative;
+  animation: icon-movement 4s infinite;
+}
+
+@keyframes icon-movement {
+  0% {
+    left: -200px;
+    top: 0px;
+  }
+  50% {
+    left: 0px;
+    top: 0px;
+  }
+  100% {
+    left: -200px;
+    top: 0px;
+  }
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 4rem;
+}
+
+.progress-bar-container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 1);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+}
+
+#progress-bar {
+  width: 30%;
+  margin-top: 0.5%;
+  height: 2%;
+}
+
+/* For Firefox */
+progress::-moz-progress-bar {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b78628+0,fcc201+100 */
+  background: #b72828; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b72828', endColorstr='#fc0101',GradientType=1 ); /* IE6-9 */
+  border-radius: 10px;
+}
+
+/* For Chrome or Safari */
+progress::-webkit-progress-value {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b78628+0,fcc201+100 */
+  background: #b72828; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b72828', endColorstr='#fc0101',GradientType=1 ); /* IE6-9 */
+  border-radius: 10px;
+}
+
+progress::-webkit-progress-bar {
+  border-radius: 10px;
+}
+
+/* For IE10 */
+progress {
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#b78628+0,fcc201+100 */
+  background: #b72828; /* Old browsers */
+  background: -moz-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    left,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to right,
+    #b72828 0%,
+    #fc0101 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b72828', endColorstr='#fc0101',GradientType=1 ); /* IE6-9 */
+  border-radius: 10px;
+}
+
+label {
+  color: white;
+  font-size: 2rem;
+}
+
+.fa {
+  padding: 0.5rem 0;
+  font-size: 30px;
+  width: 3rem;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.fa-youtube:hover {
+  background: rgb(173, 4, 4);
+}
+
+.fa-youtube {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #000000 0%,
+    #0a1c36 45%,
+    #3a0808 90%
+  );
+  color: white;
+}
+
+.fa-instagram:hover {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+}
+
+.fa-instagram {
+  background: radial-gradient(
+    circle at 30% 107%,
+    #000000 0%,
+    #0a1c36 45%,
+    #3a0808 90%
+  );
+  color: white;
+}
+
+@media only screen and (min-width: 375px) {
+  /* For mobile phones: */
+  nav {
+    padding: 1rem;
+  }
+
+  nav ul {
+    gap: 0.5rem;
+  }
+
+  nav a img {
+    animation: none;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+  nav {
+    padding: 4rem 8rem;
+  }
+
+  nav a img {
+    position: relative;
+    animation: icon-movement 4s infinite;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  nav {
+    padding: 4rem 8rem;
+  }
+
+  nav a img {
+    position: relative;
+    animation: icon-movement 4s infinite;
+  }
+
+  nav ul {
+    gap: 4rem;
+  }
+}
